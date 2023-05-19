@@ -1,0 +1,133 @@
+@import "flat-remix.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono, FontAwesome6Free;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    border-bottom: 2px solid rgba(31, 34, 41, 1.0);
+    background-color: rgba(31, 34, 41, 0.5);
+    color: @text;
+    font-weight: bold;
+}
+
+#window {
+    color: #8c42ab;
+    border-bottom: 2px solid #8c42ab;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: @text;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    background: transparent;
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#scratchpad,
+#window,
+#mpd {
+	padding: 0 8px;
+}
+
+/* #mode, #clock, #battery {
+    padding: 0 10px;
+}
+*/
+
+#pulseaudio {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+
+#network {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
+#cpu {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#memory {
+    color: @magenta;
+    border-bottom: 2px solid @magenta;
+}
+
+#temperature {
+    color: @cyan;
+    border-bottom: 2px solid @cyan;
+}
+
+#backlight {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#battery {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        color: @text;
+        border-bottom-color: @text;
+        background-color: @red;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+    border-bottom-color: @yellow;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

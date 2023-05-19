@@ -1,0 +1,16 @@
+set $black #1f2229
+set $red #d41919
+set $green #5ebdab
+set $yellow #fea44c
+set $blue #367bf0
+set $magenta #bf2e5d
+set $cyan #49aee6
+set $white #e6e6e6
+set $brightblack #8c42ab
+set $brightred #ec0101
+set $brightgreen #47d4b9
+set $brightyellow #ff8a18
+set $brightblue #277fff
+set $brightmagenta #d71655
+set $brightcyan #05a1f7
+set $brightwhite #ffffff

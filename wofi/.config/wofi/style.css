@@ -1,0 +1,35 @@
+* {
+    outline-style: none;
+}
+
+#window {
+    /* background-color: --wofi-color10; */
+}
+
+#outer-box {
+    background-color: --wofi-color0;
+    border: 2px solid --wofi-color1;
+    border-right-color: --wofi-color2;
+    border-bottom-color: --wofi-color3;
+    border-left-color: --wofi-color4;
+}
+
+#input {
+    font-weight: bold;
+    color: --wofi-color7;
+    border-color: --wofi-color0;
+    background-color: --wofi-color0;
+    outline: none;
+}
+
+#entry #text {
+    color: --wofi-color7;
+}
+
+#entry:selected {
+    background-color: --wofi-color3;
+}
+
+#entry:selected #text {
+    color: --wofi-color0;
+}
