@@ -17,25 +17,26 @@ vim.opt.shiftwidth = 4
 -- double h key press in quick succession exits insert mode
 vim.keymap.set('i', 'hh', '<esc>')
 
-local mygroup = vim.api.nvim_create_augroup('BgHighlight', { clear = true })
+-- active window has number and relativenumber set
+local mygroup = vim.api.nvim_create_augroup('ActiveWindowHighlight', { clear = true })
 vim.api.nvim_create_autocmd({ 'WinEnter' }, {
   pattern = '*',
-  group = BgHighlight,
+  group = 'ActiveWindowHighlight',
   command = 'set number',
 })
 vim.api.nvim_create_autocmd({ 'WinEnter' }, {
   pattern = '*',
-  group = 'BgHighlight',  -- equivalent to group=mygroup
+  group = 'ActiveWindowHighlight',
   command = 'set relativenumber',
 })
 vim.api.nvim_create_autocmd({ 'WinLeave' }, {
     pattern = '*',
-    group = 'BgHighlight',
+    group = 'ActiveWindowHighlight',
     command = 'set nonumber',
 })
 vim.api.nvim_create_autocmd({ 'WinLeave' }, {
     pattern = '*',
-    group = 'BgHighlight',
+    group = 'ActiveWindowHighlight',
     command = 'set norelativenumber',
 })
 
