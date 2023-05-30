@@ -15,6 +15,7 @@
 #client.background        $base
 
 include flat-remix
+include swayfx
 
 # target                 title     bg    text   indicator  border
 client.focused           $red     $black $brightwhite  $blue $red
