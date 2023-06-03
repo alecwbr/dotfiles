@@ -1,9 +1,11 @@
 #!/bin/sh
 
-grim /tmp/screen.png
+screen="/tmp/screen.png"
 
-convert -scale 10% -blur 0x1.0 -resize 1000% /tmp/screen.png /tmp/screen.png
-swaylock -f -i /tmp/screen.png
+grim "$screen"
 
-rm -f /tmp/screen.png
+convert -scale 10% -blur 0x1.0 -resize 1000% "$screen" "$screen"
+swaylock -f -i "$screen"
+
+rm -f "$screen"
 
