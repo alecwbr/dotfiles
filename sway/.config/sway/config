@@ -113,6 +113,7 @@ input "type:touchpad" {
 
 input "type:keyboard" {
 	xkb_layout us(colemak)
+    xkb_options ctrl:swapcaps
 }
 
 ### Key bindings
