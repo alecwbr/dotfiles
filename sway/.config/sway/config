@@ -18,9 +18,10 @@ include flat-remix
 include swayfx
 
 # target                 title     bg    text   indicator  border
-client.focused           $red     $black $brightwhite  $blue $red
+client.focused           $brightblue     $black $yellow  $red $blue
+client.focused_tab_title $yellow  $black $yellow
 client.focused_inactive  $magenta $black $brightwhite  $blue $black
-client.unfocused         $magenta $black $brightwhite  $red $black
+client.unfocused         $blue $black $white  $red $black
 client.urgent            $red     $black $red $white  $yellow
 client.placeholder       $white   $black $brightwhite  $white  $white
 client.background        $black
@@ -39,11 +40,12 @@ exec swayidle -w \
      timeout 600 'swaymsg "output * dpms off"' \
      resume 'swaymsg "output * dpms on"' \
 
-exec_always autotiling
+#exec_always autotiling
 
 font pango:JetBrainsMonoNerdFont Regular 11
 
 default_border pixel 2
+workspace_layout tabbed
 
 #gaps inner 5
 gaps top 4
