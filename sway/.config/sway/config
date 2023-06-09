@@ -42,7 +42,7 @@ exec swayidle -w \
 
 #exec_always autotiling
 
-font pango:JetBrainsMonoNerdFont Regular 11
+font pango:JetBrainsMonoNerdFont Regular 10
 
 default_border pixel 2
 workspace_layout tabbed
