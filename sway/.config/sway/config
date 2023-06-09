@@ -18,10 +18,10 @@ include flat-remix
 include swayfx
 
 # target                 title     bg    text   indicator  border
-client.focused           $brightblue     $black $yellow  $red $blue
+client.focused           $blacktab     $blackactivetab $white  $red $blue
 client.focused_tab_title $yellow  $black $yellow
 client.focused_inactive  $magenta $black $brightwhite  $blue $black
-client.unfocused         $blue $black $white  $red $black
+client.unfocused         $blacktab $blacktab $white  $red $black
 client.urgent            $red     $black $red $white  $yellow
 client.placeholder       $white   $black $brightwhite  $white  $white
 client.background        $black
@@ -46,6 +46,7 @@ font pango:JetBrainsMonoNerdFont Regular 10
 
 default_border pixel 2
 workspace_layout tabbed
+titlebar_border_thickness 2
 
 #gaps inner 5
 gaps top 4
