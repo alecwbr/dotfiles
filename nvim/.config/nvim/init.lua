@@ -18,7 +18,7 @@ vim.keymap.set('i', 'hh', '<esc>')
 
 -- statusline
 vim.opt.laststatus = 2
-vim.cmd.hi("Statusline cterm=NONE ctermfg=NONE ctermbg=NONE")
+vim.cmd.hi("Statusline cterm=NONE ctermfg=NONE ctermbg=Black")
 vim.cmd.hi("StatuslineNC cterm=NONE ctermfg=247 ctermbg=NONE")
 vim.cmd.hi("VertSplit cterm=NONE ctermfg=Black ctermbg=NONE")
 
@@ -26,7 +26,14 @@ vim.cmd.hi("StatuslineGit cterm=Bold ctermfg=Black ctermbg=Magenta")
 vim.cmd.hi("StatuslineFile cterm=Bold ctermfg=Black ctermbg=Yellow")
 vim.cmd.hi("StatuslineFileType cterm=Bold ctermfg=Green ctermbg=Black")
 vim.cmd.hi("StatuslineModified cterm=Bold ctermfg=Magenta ctermbg=Black")
-vim.cmd.hi("StatuslineDivider cterm=Bold ctermfg=Black ctermbg=Black")
+vim.cmd.hi("StatuslineDivider1 cterm=Bold ctermfg=Magenta ctermbg=Yellow")
+vim.cmd.hi("StatuslineDivider2 cterm=Bold ctermfg=Yellow ctermbg=Black")
+vim.cmd.hi("StatuslineRight1 cterm=Bold ctermfg=Black ctermbg=Blue")
+vim.cmd.hi("StatuslineRight2 cterm=Bold ctermfg=Black ctermbg=Green")
+vim.cmd.hi("StatuslineRight3 cterm=Bold ctermfg=Black ctermbg=Red")
+vim.cmd.hi("StatuslineDividerRight1 cterm=Bold ctermfg=Blue ctermbg=Green")
+vim.cmd.hi("StatuslineDividerRight2 cterm=Bold ctermfg=Green ctermbg=Red")
+vim.cmd.hi("StatuslineDividerRight3 cterm=Bold ctermfg=Red ctermbg=Black")
 vim.cmd.hi("StatuslineRight cterm=Bold ctermfg=Black ctermbg=Blue")
 
 local function current_branch(path)
@@ -57,12 +64,12 @@ vim.api.nvim_create_autocmd({ 'WinEnter', 'BufEnter' }, {
         local path = vim.fn.expand('%:h')
         vim.b.current_branch = current_branch(path)
         statusline = ''
-        statusline = statusline .. '%#StatuslineGit# ' .. vim.b.current_branch .. '%#StatuslineDivider# '
-        statusline = statusline .. '%#StatuslineFile#' .. ' %F %#StatuslineDivider# '
+        statusline = statusline .. '%#StatuslineGit# ' .. vim.b.current_branch .. '%#StatuslineDivider1#'
+        statusline = statusline .. '%#StatuslineFile#' .. ' %F %#StatuslineDivider2#'
         statusline = statusline .. '%#StatuslineFileType#' .. ' %y '
         statusline = statusline .. '%#StatuslineModified#' .. ' %m '
         statusline = statusline .. '%#StatuslineDivider#' .. '%='
-        statusline = statusline .. '%#StatuslineRight#' .. ' %{&ff} %#StatuslineDivider# ' .. '%#StatuslineRight# %l/%L %#StatuslineDivider# ' .. '%#StatuslineRight# (%p%%) %#StatuslineDivider# ' .. '%#StatuslineRight 0%v '
+        statusline = statusline .. ' %#StatuslineDividerRight3#%#StatuslineRight3# %{&ff} ' .. '%#StatuslineDividerRight2#%#StatuslineRight2# %l/%L ' .. '%#StatuslineDividerRight1#%#StatuslineRight1# (%p%%) ' .. '%#StatuslineRight 0%v '
         vim.opt_local.statusline = statusline
     end
 })
