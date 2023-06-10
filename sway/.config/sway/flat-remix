@@ -14,3 +14,7 @@ set $brightblue #277fff
 set $brightmagenta #d71655
 set $brightcyan #05a1f7
 set $brightwhite #ffffff
+set $blackactivetab #333333e6
+set $blacktab #111111e6
+set $whitetransparent #e6e6e6e6
+set $tabactiveborder #367bf0cc
